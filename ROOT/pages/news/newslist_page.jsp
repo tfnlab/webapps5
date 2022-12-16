@@ -47,31 +47,7 @@
 
                         for (File file : files) {
                           if(j > files.length - 50 ){
-                            fileMap.put((new Date(file.lastModified())).toString(),file.getName());
-                      %>
-
-                                   <h2 class="fs-4 fw-bold">
-                                     </h2>
-                                   <p class="mb-0">
-
-
-                                   </p>
-
-                                   <div class="card text-center">
-                                     <div class="card-body">
-                                       <h5 class="card-title"><%=j+""%></h5>
-                                       <p class="card-text">
-                                       <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
-
-                                       </p>
-                                     </div>
-                                     <div class="card-footer">
-                                       <small class="text-muted"><%= new Date(file.lastModified()) %></small>
-                                     </div>
-                                     <img src="/pages/news/images/<%= file.getName() %>.png" class="card-img-right" alt="Card image">
-                                   </div>
-
-                      <%
+                            fileMap.put((new Date(file.lastModified())).toString(),file.getName());                      
                           }
                           j +=1;
                         }
