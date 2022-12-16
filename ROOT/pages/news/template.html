@@ -1,0 +1,126 @@
+<%@ page import="java.io.File" %>
+<%@ page import="java.io.FileFilter" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.Comparator" %>
+<%@ page import="java.util.Date" %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Heroic Features - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="#!">Merikyan</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h1 class="display-5 fw-bold">Glad you're here!</h1>
+                        <p class="fs-4">
+                          Welcome to our site! We're so glad you're here. Whether you're a returning visitor or a newcomer, we hope you'll find something of interest on our site. Please feel free to explore and reach out to us with any questions or comments. We look forward to connecting with you!
+                        </p>
+                        <a class="btn btn-primary btn-lg" href="#!">News</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Page Content-->
+        <section class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="text-center">
+                      <h1 class="text-center mt-5">
+                        <BL-TITLE>
+                      </h1>
+                      <p class="text-secondary fs-15 mb-5 pb-3">
+                        <BL-TITLE-DES>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-wrap">
+                  <div class="row">
+                    <div class="col-lg-6  mb-5 mb-sm-2">
+                      <div class="position-relative image-hover">
+                        <img
+                          src="../images/<BL-IMG>"
+                          class="img-fluid"
+                          alt="world-news"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 mb-2 mb-lg-2">
+                      <div class="row">
+                        <div class="col-sm-12  mb-2 mb-lg-2">
+                          <h1>BY <BL-AUTH></h1>
+                          <p class="mb-3">
+                            <BL-DATE>
+                          </p>
+                          <p class="mb-4">
+                            <a href="https://burbanklive.com" >Burbank Live</a><BR>
+                              <BR>
+                            <BL-P>
+                              <a href="https://news.burbanklive.com/pages/news/published/<BL-THREF>" class="twitter-share-button" data-text="<BL-TXT> Check out this amazing article published on BurbankLive.com #burbank #news" data-via="burbanklive" data-show-count="false">Tweet</a>
+                              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                              <BR><BR>
+                              <a href="https://www.linkedin.com/shareArticle?url=https://news.burbanklive.com/pages/news/published/<BL-LHREF>">
+                                Share on LinkedIn
+                              </a>
+
+                          </p>
+                          <!--
+                          <p class="mb-4">
+                            The new location will be situated in a prime spot in the heart of Burbank, making it easily accessible for residents and visitors alike. The restaurant will feature the same menu as the original location, offering a wide variety of tasty dishes to choose from.
+                          </p>
+                          <p class="fs-15 font-weight-600">
+                            VIEW MORE INFORMATION <a href="https://burbanklive.com">burbanklive.com</a>
+                          </p>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12  mb-4 mb-lg-4">
+                      <p class="fs-15 font-weight-normal mb-4 mt-5">
+                          <BL-P-LOW>
+                      </p>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Merikyan 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
