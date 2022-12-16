@@ -33,20 +33,6 @@
                 </div>
             </div>
         </nav>
-        <!-- Header-->
-        <header class="py-5">
-            <div class="container px-lg-5">
-                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
-                    <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">Glad you're here!</h1>
-                        <p class="fs-4">
-                          Welcome to our site! We're so glad you're here. Whether you're a returning visitor or a newcomer, we hope you'll find something of interest on our site. Please feel free to explore and reach out to us with any questions or comments. We look forward to connecting with you!
-                        </p>
-                        <a class="btn btn-primary btn-lg" href="#!">News</a>
-                    </div>
-                </div>
-            </div>
-        </header>
         <!-- Page Content-->
         <section class="pt-4">
             <div class="container px-lg-5">
