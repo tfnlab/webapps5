@@ -57,6 +57,7 @@
                     for (String key : fileMap.keySet()) {
                       fileList.add(key);
                     }
+                    j = 1;
                     for (int i = fileList.size() - 1; i >= 0; i--) {
                       String element = fileList.get(i);
                       %>
@@ -69,7 +70,7 @@
 
                       <div class="card text-center">
                         <div class="card-body">
-                          <h5 class="card-title"><%=j+""%></h5>
+                          <h5 class="card-title"><%=j+""%> of 50</h5>
                           <p class="card-text">
                           <a href=published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
 
@@ -82,5 +83,6 @@
                       </div>
 
                       <%
+                      j +=1;
                     }
                     %>
