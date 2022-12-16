@@ -76,7 +76,7 @@
                         // Loop through the sorted files array and print the names and creation dates of the files
                         int j = 1;
                         for (File file : files) {
-                          if(j > files.length - 50 ){
+                          if(j > files.length - 200 ){
                             fileMap.put((new Date(file.lastModified())).toString(),file.getName());
                           }
                           j +=1;
