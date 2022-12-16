@@ -37,7 +37,7 @@
                       <%
                         // Loop through the sorted files array and print the names and creation dates of the files
                         int j = 1;
-                        <%
+                        
                         for (File file : files) {
                           if(j > files.length - 50 ){
                       %>
