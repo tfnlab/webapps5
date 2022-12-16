@@ -70,7 +70,7 @@
 
                       <div class="card text-center">
                         <div class="card-body">
-                          <h5 class="card-title"><%=j+""%> of 50</h5>
+                          <h5 class="card-title">Featured Article <%=j+""%> of 50</h5>
                           <p class="card-text">
                           <a href=/pages/news/published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
 
