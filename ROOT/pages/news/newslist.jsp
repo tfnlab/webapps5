@@ -3,6 +3,10 @@
 <%@ page import="java.util.Arrays" %>
 <%@ page import="java.util.Comparator" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.Vector" %>
+<%@ page import="java.util.TreeMap" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -70,18 +74,39 @@
                         // Loop through the sorted files array and print the names and creation dates of the files
                         int j = 1;
                         for (File file : files) {
-
-                      %>
-                      <li><%=j+""%> <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
-                          <BR>
-                          <% j +=1;%>
-                          <hr style="border-color: lightblue;">
-                          <%= new Date(file.lastModified()) %>
-                          <hr style="border-color: black;">
-                          <BR><BR>
-                       </li>
-                      <%
+                          if(j > files.length - 50 ){
+                            fileMap.put((new Date(file.lastModified())).toString(),file.getName());
+                          }
+                          j +=1;
                         }
+
+                    for (String key : fileMap.keySet()) {
+                      fileList.add(key);
+                    }
+                    for (int i = fileList.size() - 1; i >= 0; i--) {
+                      String element = fileList.get(i);
+                      %>
+
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <h5 class="card-title">
+                          <a href=published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
+                          </h5>
+                          <p class="card-text">
+                          <%=element%>
+                          </p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">Featured Article <%=j+""%> of 50</small>
+                        </div>
+                        <img src="../images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
+                        <HR>
+                      </div>
+
+                      <%
+                      j +=1;
+                    }
+
                       %>
                     </ul>
 
