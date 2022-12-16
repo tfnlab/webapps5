@@ -99,9 +99,9 @@
                           </p>
                         </div>
                         <div class="card-footer">
-                          <small class="text-muted">Featured Article <%=j+""%> of 50</small>
+                          <small class="text-muted">Featured Article <%=(fileList.size()-j)+""%> of <%=fileList.size()%></small>
                         </div>
-                        <img src="../images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
+                        <img src="images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
                         <HR>
                       </div>
 
