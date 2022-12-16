@@ -65,6 +65,7 @@
                           <small class="text-muted">Featured Article <%=j+""%> of 50</small>
                         </div>
                         <img src="/pages/news/images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
+                        <HR>
                       </div>
 
                       <%
