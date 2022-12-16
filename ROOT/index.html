@@ -12,8 +12,22 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script>
+          function loadData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("currentTime").innerHTML = this.responseText;
+              }
+            };
+            var urlString = "pages/news/newslist_page.jsp";
+            xhttp.open("GET", urlString, true);
+            xhttp.send();
+
+          }
+        </script>
     </head>
-    <body>
+    <body onload="loadData()">
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-lg-5">
