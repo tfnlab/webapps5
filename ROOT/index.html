@@ -17,7 +17,7 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("currentTime").innerHTML = this.responseText;
+                document.getElementById("currentNews").innerHTML = this.responseText;
               }
             };
             var urlString = "pages/news/newslist_page.jsp";
@@ -54,6 +54,15 @@
                 </div>
             </div>
         </header>
+
+        <section class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5" name="currentNews" id="currentNews">
+
+                </div>
+            </div>
+        </section>
         <!-- Page Content-->
         <section class="pt-4">
             <div class="container px-lg-5">
