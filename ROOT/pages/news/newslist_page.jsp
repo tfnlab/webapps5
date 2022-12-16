@@ -3,12 +3,16 @@
 <%@ page import="java.util.Arrays" %>
 <%@ page import="java.util.Comparator" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.TreeMap" %>
 
 
 
 
                     <%
                       // Define the directory where the files are located
+                      Map<String, String> fileMap = new HashMap<String, String>();
                       String directory = "/var/lib/tomcat9/webapps5/ROOT/pages/news/published";
 
                       // Create a File object for the directory
@@ -40,6 +44,7 @@
 
                         for (File file : files) {
                           if(j > files.length - 50 ){
+                            fileMap.put( (new Date(file.lastModified())).toString(),file.getName())
                       %>
 
                                    <h2 class="fs-4 fw-bold">
