@@ -44,7 +44,6 @@
                       %>
                       <li><%=j+""%> <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
                           <BR>
-                          <% j +=1;%>
                           <hr style="border-color: lightblue;">
                           <%= new Date(file.lastModified()) %>
                           <hr style="border-color: black;">
@@ -52,6 +51,7 @@
                        </li>
                       <%
                           }
+                          j +=1;
                         }
                       %>
                     </ul>
