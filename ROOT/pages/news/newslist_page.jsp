@@ -70,14 +70,15 @@
 
                       <div class="card text-center">
                         <div class="card-body">
-                          <h5 class="card-title">Featured Article <%=j+""%> of 50</h5>
-                          <p class="card-text">
+                          <h5 class="card-title">
                           <a href=/pages/news/published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
-
+                          </h5>
+                          <p class="card-text">                          
+                          <%=element%>
                           </p>
                         </div>
                         <div class="card-footer">
-                          <small class="text-muted"><%=element%></small>
+                          <small class="text-muted">Featured Article <%=j+""%> of 50</small>
                         </div>
                         <img src="/pages/news/images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
                       </div>
