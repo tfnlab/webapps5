@@ -41,13 +41,13 @@
                         for (File file : files) {
                           if(j > files.length - 50 ){
                       %>
-                                   <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+
                                    <h2 class="fs-4 fw-bold">
-                                     <%=j+""%>
-                                     <%= new Date(file.lastModified()) %>
-                                     </h2>
-                                   <p class="mb-0">
                                      <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
+                                      </h2>
+                                   <p class="mb-0">
+                                   <%=j+""%>
+                                   <%= new Date(file.lastModified()) %>
                                    </p>
                       <%
                           }
