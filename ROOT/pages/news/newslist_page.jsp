@@ -13,7 +13,7 @@
 
                     <%
                       // Define the directory where the files are located
-                      Map<String, String> fileMap = new HashMap<String, String>();
+                      Map<String, String> fileMap = new TreeMap<String, String>();
                       String directory = "/var/lib/tomcat9/webapps5/ROOT/pages/news/published";
 
                       // Create a File object for the directory
@@ -75,3 +75,8 @@
                         }
                       %>
                     </ul>
+                    <%
+                    for (String key : fileMap.keySet()) {
+                      %><%=key%><%
+                    }
+                    %>
