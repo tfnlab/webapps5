@@ -43,12 +43,26 @@
                       %>
 
                                    <h2 class="fs-4 fw-bold">
-                                     <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
-                                      </h2>
+                                     </h2>
                                    <p class="mb-0">
-                                   <%=j+""%>
-                                   <%= new Date(file.lastModified()) %>
+
+
                                    </p>
+
+                                   <div class="card text-center">
+                                     <div class="card-body">
+                                       <h5 class="card-title"><%=j+""%></h5>
+                                       <p class="card-text">
+                                       <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
+
+                                       </p>
+                                     </div>
+                                     <div class="card-footer">
+                                       <small class="text-muted"><%= new Date(file.lastModified()) %></small>
+                                     </div>
+                                     <img src="/pages/news/images/<%= file.getName() %>.png" class="card-img-right" alt="Card image">
+                                   </div>
+
                       <%
                           }
                           j +=1;
