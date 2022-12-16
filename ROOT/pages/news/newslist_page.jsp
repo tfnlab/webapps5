@@ -84,7 +84,28 @@
                     }
                     for (int i = fileList.size() - 1; i >= 0; i--) {
                       String element = fileList.get(i);
-                      %><%=element%>
-                      <%=fileMap.get(element)%><%
+                      %>
+                      <h2 class="fs-4 fw-bold">
+                        </h2>
+                      <p class="mb-0">
+
+
+                      </p>
+
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <h5 class="card-title"><%=j+""%></h5>
+                          <p class="card-text">
+                          <a href=published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
+
+                          </p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted"><%=element%></small>
+                        </div>
+                        <img src="/pages/news/images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
+                      </div>
+
+                      <%
                     }
                     %>
