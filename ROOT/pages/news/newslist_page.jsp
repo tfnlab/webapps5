@@ -5,6 +5,7 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="java.util.Vector" %>
 <%@ page import="java.io.File" %>
 <%@ page import="java.util.TreeMap" %>
 
@@ -14,6 +15,7 @@
                     <%
                       // Define the directory where the files are located
                       Map<String, String> fileMap = new TreeMap<String, String>();
+                      Vector<String, String>  fileList = new Vector<String, String>();
                       String directory = "/var/lib/tomcat9/webapps5/ROOT/pages/news/published";
 
                       // Create a File object for the directory
@@ -77,6 +79,12 @@
                     </ul>
                     <%
                     for (String key : fileMap.keySet()) {
+                      fileList.add(key);
                       %><%=key%><%
+                    }
+                    for (int i = fileList.size() - 1; i >= 0; i--) {
+                      String element = fileList.get(i);
+                      %><%=element%>
+                      <%=fileMap.get(element)%><%
                     }
                     %>
