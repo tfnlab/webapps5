@@ -3,6 +3,7 @@
 <%@ page import="java.util.Arrays" %>
 <%@ page import="java.util.Comparator" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                     <%
@@ -35,11 +36,14 @@
                         // Loop through the sorted files array and print the names and creation dates of the files
                         int j = 1;
                         for (File file : files) {
+                          SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
+                          // Format the date and store it in a variable
+                          String formattedDate = formatter.format(new Date(file.lastModified()));
                       %>
                       <url>
                         <loc>https://merikyan.com/pages/news/published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></loc>
-                        <lastmod><%= new Date(file.lastModified()) %></lastmod>
+                        <lastmod><%= formattedDate %></lastmod>
                         <changefreq>monthly</changefreq>
                         <priority>0.8</priority>
                        </url>
