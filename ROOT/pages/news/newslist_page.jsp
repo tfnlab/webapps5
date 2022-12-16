@@ -72,7 +72,7 @@
                         <div class="card-body">
                           <h5 class="card-title"><%=j+""%> of 50</h5>
                           <p class="card-text">
-                          <a href=published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
+                          <a href=/pages/news/published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
 
                           </p>
                         </div>
