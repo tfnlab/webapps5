@@ -7,12 +7,7 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.io.File" %>
-<%@ page import="java.util.TreeMap" %>
-
-
-
-
-                    <%
+<%@ page import="java.util.TreeMap" %><%
                       // Define the directory where the files are located
                       Map<String, String> fileMap = new TreeMap<String, String>();
                       Vector<String>  fileList = new Vector<String>();
@@ -38,10 +33,7 @@
                           return Long.compare(file1.lastModified(), file2.lastModified());
                         }
                       });
-                    %>
 
-                    <ul>
-                      <%
                         // Loop through the sorted files array and print the names and creation dates of the files
                         int j = 1;
 
@@ -51,9 +43,7 @@
                           }
                           j +=1;
                         }
-                      %>
-                    </ul>
-                    <%
+
                     for (String key : fileMap.keySet()) {
                       fileList.add(key);
                     }
@@ -61,19 +51,13 @@
                     for (int i = fileList.size() - 1; i >= 0; i--) {
                       String element = fileList.get(i);
                       %>
-                      <h2 class="fs-4 fw-bold">
-                        </h2>
-                      <p class="mb-0">
-
-
-                      </p>
 
                       <div class="card text-center">
                         <div class="card-body">
                           <h5 class="card-title">
                           <a href=/pages/news/published/<%= fileMap.get(element) %> ><%= fileMap.get(element).replace("_", " ").replace(".html", "") %></a>
                           </h5>
-                          <p class="card-text">                          
+                          <p class="card-text">
                           <%=element%>
                           </p>
                         </div>
