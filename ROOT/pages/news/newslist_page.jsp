@@ -47,7 +47,7 @@
 
                         for (File file : files) {
                           if(j > files.length - 50 ){
-                            fileMap.put((new Date(file.lastModified())).toString(),file.getName());                      
+                            fileMap.put((new Date(file.lastModified())).toString(),file.getName());
                           }
                           j +=1;
                         }
@@ -56,7 +56,6 @@
                     <%
                     for (String key : fileMap.keySet()) {
                       fileList.add(key);
-                      %><%=key%><%
                     }
                     for (int i = fileList.size() - 1; i >= 0; i--) {
                       String element = fileList.get(i);
