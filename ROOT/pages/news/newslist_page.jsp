@@ -37,18 +37,26 @@
                       <%
                         // Loop through the sorted files array and print the names and creation dates of the files
                         int j = 1;
-                        %><%=files.length%>
                         <%
                         for (File file : files) {
                           if(j > files.length - 50 ){
                       %>
-                      <li><%=j+""%> <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
-                          <BR>
-                          <hr style="border-color: lightblue;">
-                          <%= new Date(file.lastModified()) %>
-                          <hr style="border-color: black;">
-                          <BR><BR>
-                       </li>
+                       <div class="col-lg-6 col-xxl-4 mb-5">
+                           <div class="card bg-light border-0 h-100">
+                               <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                   <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                                   <h2 class="fs-4 fw-bold">
+                                     <%=j+""%>
+                                     <%= new Date(file.lastModified()) %>
+                                     </h2>
+                                   <p class="mb-0">
+                                     <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
+                                     We offer a variety of advertising options, including print, online, and broadcast media, to help businesses and organizations reach their target audience.
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+
                       <%
                           }
                           j +=1;
