@@ -40,7 +40,7 @@
                         %><%=files.length%>
                         <%
                         for (File file : files) {
-
+                          if(j > files.length - 50 ){
                       %>
                       <li><%=j+""%> <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
                           <BR>
@@ -51,6 +51,7 @@
                           <BR><BR>
                        </li>
                       <%
+                          }
                         }
                       %>
                     </ul>
