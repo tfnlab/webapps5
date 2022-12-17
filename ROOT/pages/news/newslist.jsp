@@ -85,7 +85,7 @@
                     }
                     %>
                     <p>
-                      Welcome to the article archive for merikyan.com! On this page, you will find a comprehensive list of all the articles that have been published on our site to date. There are a total of <%=fileList.size()%> articles in our archive, and they are organized in chronological order, with the most recent articles appearing at the top of the list. This means that you can easily find the latest content published on our site by browsing through the top of the list. Whether you're looking for the latest news, insights, or analysis on a particular topic, or just want to browse through our extensive collection of content, this page is the perfect resource for you. We hope you find what you're looking for, and thank you for visiting merikyan.com!
+                      Welcome to the article archive for merikyan.com! On this page, you will find a comprehensive list of all the articles that have been published on our site to date. There are a total of <b><%=fileList.size()%></b> articles in our archive, and they are organized in chronological order, with the most recent articles appearing at the top of the list. This means that you can easily find the latest content published on our site by browsing through the top of the list. Whether you're looking for the latest news, insights, or analysis on a particular topic, or just want to browse through our extensive collection of content, this page is the perfect resource for you. We hope you find what you're looking for, and thank you for visiting merikyan.com!
                     </p>
                     <%
                     for (int i = fileList.size() - 1; i >= 0; i--) {
