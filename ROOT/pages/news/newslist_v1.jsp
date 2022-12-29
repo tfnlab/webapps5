@@ -7,6 +7,7 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.TreeMap" %>
+<%@ page import="java.util.Arrays" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -47,7 +48,19 @@
                 <!-- Page Features-->
                 <div class="row gx-lg-5">
 
+                <%
+                  // Get the list of files in the directory
+                  File directory = new File("/var/lib/tomcat9/webapps5/ROOT/pages/news/published");
+                  File[] files = directory.listFiles();
 
+                  // Sort the files in ascending order
+                  Arrays.sort(files);
+
+                  // Iterate through the files and print their names
+                  for (File file : files) {
+                    out.println(file.getName() + "<br>");
+                  }
+                %>
 
                     <%
                       // Define the directory where the files are located
