@@ -67,8 +67,27 @@
                   });
 
                   // Iterate through the files and print their names
+                  int i = 1;
                   for (File file : files) {
-                    %><%=file.getName()%><BR><%
+                    %><%=file.getName()%><BR>
+                    <div class="card text-center">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                        <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
+                        </h5>
+                        <p class="card-text">
+                        <%=element%>
+                        </p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Featured Article <%=i+1%> of <%=fileList.size()%></small>
+                      </div>
+                      <img src="images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
+                      <HR>
+                    </div>
+
+                    <%
+                    i += 1;
                   }
                 %>
 
