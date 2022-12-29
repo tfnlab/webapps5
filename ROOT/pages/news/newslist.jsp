@@ -85,7 +85,7 @@
                         </p>
                       </div>
                       <div class="card-footer">
-                        <small class="text-muted">Featured Article <%=i+1%> of <%=files.length%></small>
+                        <small class="text-muted">Featured Article <%=i%> of <%=files.length%></small>
                       </div>
                       <img src="images/<%= file.getName() %>.png" class="card-img-right" alt="Card image">
                       <HR>
