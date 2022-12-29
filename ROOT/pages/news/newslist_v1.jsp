@@ -71,7 +71,7 @@
                         }
 
                     for (Date key : fileMap.keySet()) {
-                      fileList.add(fileMap.get(key));
+                      //fileList.add(fileMap.get(key));
                     }
                     %>
                     <p>
