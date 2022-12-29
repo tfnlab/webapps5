@@ -64,6 +64,13 @@
                     }
                   });
 
+                  Arrays.sort(files, new Comparator<File>() {
+                    @Override
+                    public int compare(File f1, File f2) {
+                      return -Long.compare(f1.lastModified(), f2.lastModified());
+                    }
+                  });                  
+
                   // Iterate through the files and print their names
                   for (File filetmp : filestmp) {
                     %><%=filetmp.getName()%><BR><%
