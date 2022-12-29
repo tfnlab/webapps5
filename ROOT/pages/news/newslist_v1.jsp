@@ -54,7 +54,14 @@
                   File[] filestmp = directory.listFiles();
 
                   // Sort the files in ascending order
-                  Arrays.sort(filestmp);
+                  //Arrays.sort(filestmp);
+                  // Sort the files in descending order
+                  Arrays.sort(files, new Comparator<File>() {
+                    @Override
+                    public int compare(File f1, File f2) {
+                      return -f1.compareTo(f2);
+                    }
+                  });
 
                   // Iterate through the files and print their names
                   for (File filetmp : filestmp) {
