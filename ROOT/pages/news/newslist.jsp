@@ -82,9 +82,9 @@
                   int pageSize = 10;
                   int startIndex = (pageNum - 1) * pageSize;
                   int endIndex = Math.min(startIndex + pageSize, files.length);
-                  List<File> page = Arrays.asList(files).subList(startIndex, endIndex);
+                  List<File> newspage = Arrays.asList(files).subList(startIndex, endIndex);
 
-                  for (File file : page) {
+                  for (File file : newspage) {
                     %>
                     <div class="card text-center">
                       <div class="card-body">
