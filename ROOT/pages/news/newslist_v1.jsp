@@ -70,8 +70,8 @@
                           j +=1;
                         }
 
-                    for (String key : fileMap.keySet()) {
-                      fileList.add(key);
+                    for (Date key : fileMap.keySet()) {
+                      fileList.add(fileMap.get(Date));
                     }
                     %>
                     <p>
