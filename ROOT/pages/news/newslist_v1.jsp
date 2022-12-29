@@ -82,7 +82,7 @@
                       <div class="card-footer">
                         <small class="text-muted">Featured Article <%=i+1%> of <%=fileList.size()%></small>
                       </div>
-                      <img src="images/<%= fileMap.get(element) %>.png" class="card-img-right" alt="Card image">
+                      <img src="images/<%= file.getName() %>.png" class="card-img-right" alt="Card image">
                       <HR>
                     </div>
 
