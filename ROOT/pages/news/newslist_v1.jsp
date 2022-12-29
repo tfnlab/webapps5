@@ -57,7 +57,7 @@
                   //Arrays.sort(filestmp);
                   // Sort the files in descending order
 
-                  Arrays.sort(filetmp, new Comparator<File>() {
+                  Arrays.sort(filestmp, new Comparator<File>() {
                     @Override
                     public int compare(File f1, File f2) {
                       return Long.compare(f1.lastModified(), f2.lastModified());
