@@ -156,7 +156,7 @@
                     <ul class="pagination">
                       <%
                       // Calculate the total number of pages
-                      int numPages = (int) Math.ceil((double) files.length / pageSize);
+                      // int numPages = (int) Math.ceil((double) files.length / pageSize);
 
                       // Generate a link to the previous page, if applicable
                       if (pageNum > 1) {
