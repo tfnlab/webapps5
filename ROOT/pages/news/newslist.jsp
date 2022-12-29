@@ -83,7 +83,51 @@
                   int startIndex = (pageNum - 1) * pageSize;
                   int endIndex = Math.min(startIndex + pageSize, files.length);
                   List<File> newspage = Arrays.asList(files).subList(startIndex, endIndex);
+%>
+<div class="pagination-container d-flex justify-content-center">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <%
+      // Calculate the total number of pages
+      int numPages = (int) Math.ceil((double) files.length / pageSize);
 
+      // Generate a link to the previous page, if applicable
+      if (pageNum > 1) {
+        %>
+        <li class="page-item">
+          <a class="page-link" href="newslist.jsp?page=<%= pageNum - 1 %>" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <%
+      }
+
+      // Generate links to the individual pages
+      for (int i = 1; i <= numPages; i++) {
+        %>
+        <li class="page-item<%= i == pageNum ? " active" : "" %>">
+          <a class="page-link" href="newslist.jsp?page=<%= i %>"><%= i %></a>
+        </li>
+        <%
+      }
+
+      // Generate a link to the next page, if applicable
+      if (pageNum < numPages) {
+        %>
+        <li class="page-item">
+          <a class="page-link" href="newslist.jsp?page=<%= pageNum + 1 %>" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+        <%
+        }
+        %>
+        </ul>
+        </nav>
+        </div>
+<%
                   for (File file : newspage) {
                     %>
                     <div class="card text-center">
