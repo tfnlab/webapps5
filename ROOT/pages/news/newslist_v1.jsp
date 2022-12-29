@@ -73,10 +73,10 @@
                     <div class="card text-center">
                       <div class="card-body">
                         <h5 class="card-title">
-                        <a href=published/<%= file.getName() %> ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
+                        <a href="published/<%= file.getName() %>"" ><%= file.getName().replace("_", " ").replace(".html", "") %></a>
                         </h5>
                         <p class="card-text">
-                        <%=element%>
+                        <%=file.getName()%>
                         </p>
                       </div>
                       <div class="card-footer">
