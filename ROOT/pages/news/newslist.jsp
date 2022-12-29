@@ -49,6 +49,11 @@
                 <div class="row gx-lg-5">
 
                 <%
+                  int pageNum = 1;
+                  String pageNumStr = request.getParameter("page");
+                  if (pageNumStr != null) {
+                    pageNum = Integer.parseInt(pageNumStr);
+                  }
                   // Get the list of files in the directory
                   File directory = new File("/var/lib/tomcat9/webapps5/ROOT/pages/news/published");
                   File[] files = directory.listFiles();
@@ -73,7 +78,12 @@
                   <%
                   // Iterate through the files and print their names
                   int i = 1;
-                  for (File file : files) {
+                  int pageSize = 10;
+                  int startIndex = (pageNum - 1) * pageSize;
+                  int endIndex = Math.min(startIndex + pageSize, files.length);
+                  List<File> page = Arrays.asList(files).subList(startIndex, endIndex);
+
+                  for (File file : page) {
                     %>
                     <div class="card text-center">
                       <div class="card-body">
