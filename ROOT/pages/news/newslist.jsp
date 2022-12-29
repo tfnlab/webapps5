@@ -78,7 +78,7 @@
                   </p>
                   <%
                   // Iterate through the files and print their names
-                  int i = 1;
+                  int k = 1;
                   int pageSize = 10;
                   int startIndex = (pageNum - 1) * pageSize;
                   int endIndex = Math.min(startIndex + pageSize, files.length);
@@ -96,14 +96,14 @@
                         </p>
                       </div>
                       <div class="card-footer">
-                        <small class="text-muted">Featured Article <%=i%> of <%=files.length%></small>
+                        <small class="text-muted">Featured Article <%=k%> of <%=files.length%></small>
                       </div>
                       <img src="images/<%= file.getName() %>.png" class="card-img-right" alt="Card image">
                       <HR>
                     </div>
 
                     <%
-                    i += 1;
+                    k += 1;
                   }
                 %>
 
