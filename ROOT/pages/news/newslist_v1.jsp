@@ -51,29 +51,24 @@
                 <%
                   // Get the list of files in the directory
                   File directory = new File("/var/lib/tomcat9/webapps5/ROOT/pages/news/published");
-                  File[] filestmp = directory.listFiles();
+                  File[] files = directory.listFiles();
 
                   // Sort the files in ascending order
                   //Arrays.sort(filestmp);
                   // Sort the files in descending order
 
-                  Arrays.sort(filestmp, new Comparator<File>() {
-                    @Override
-                    public int compare(File f1, File f2) {
-                      return Long.compare(f1.lastModified(), f2.lastModified());
-                    }
-                  });
+
 
                   Arrays.sort(files, new Comparator<File>() {
                     @Override
                     public int compare(File f1, File f2) {
                       return -Long.compare(f1.lastModified(), f2.lastModified());
                     }
-                  });                  
+                  });
 
                   // Iterate through the files and print their names
-                  for (File filetmp : filestmp) {
-                    %><%=filetmp.getName()%><BR><%
+                  for (File file : files) {
+                    %><%=file.getName()%><BR><%
                   }
                 %>
 
