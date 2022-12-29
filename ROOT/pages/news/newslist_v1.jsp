@@ -58,7 +58,7 @@
                       // Create a File object for the directory
                       File dir = new File(directory);
 
-                     File[] files = dir.listFiles()
+                     File[] files = dir.listFiles();
                     %>
 
                     <ul>
