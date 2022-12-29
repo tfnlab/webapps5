@@ -51,14 +51,14 @@
                 <%
                   // Get the list of files in the directory
                   File directory = new File("/var/lib/tomcat9/webapps5/ROOT/pages/news/published");
-                  File[] files = directory.listFiles();
+                  File[] filestmp = directory.listFiles();
 
                   // Sort the files in ascending order
-                  Arrays.sort(files);
+                  Arrays.sort(filestmp);
 
                   // Iterate through the files and print their names
-                  for (File file : files) {
-                    out.println(file.getName() + "<br>");
+                  for (File filetmp : filestmp) {
+                    out.println(filetmp.getName() + "<br>");
                   }
                 %>
 
