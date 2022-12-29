@@ -58,23 +58,7 @@
                       // Create a File object for the directory
                       File dir = new File(directory);
 
-                      // Use the listFiles method to get an array of File objects for the files in the directory
-                      File[] files = dir.listFiles(new FileFilter() {
-                        @Override
-                        public boolean accept(File pathname) {
-                          // Accept only files (not directories)
-                          return pathname.isFile();
-                        }
-                      });
-
-                      // Sort the files array by the date the files were created
-                      Arrays.sort(files, new Comparator<File>() {
-                        @Override
-                        public int compare(File file1, File file2) {
-                          // Compare the creation dates of the two files
-                          return Long.compare(file1.lastModified(), file2.lastModified());
-                        }
-                      });
+                     
                     %>
 
                     <ul>
