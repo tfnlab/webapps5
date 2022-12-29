@@ -53,7 +53,7 @@
                       // Define the directory where the files are located
                       String directory = "/var/lib/tomcat9/webapps5/ROOT/pages/news/published";
                       TreeMap<Date, String> fileMap = new TreeMap<Date, String>();
-                      Vector<String>  fileList = new Vector<String>();
+                      Vector<Date>  fileList = new Vector<Date>();
 
                       // Create a File object for the directory
                       File dir = new File(directory);
