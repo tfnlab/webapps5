@@ -79,7 +79,7 @@
                   <%
                   // Iterate through the files and print their names
                   int k = 1;
-                  int pageSize = 10;
+                  int pageSize = 100;
                   int startIndex = (pageNum - 1) * pageSize;
                   int endIndex = Math.min(startIndex + pageSize, files.length);
                   List<File> newspage = Arrays.asList(files).subList(startIndex, endIndex);
